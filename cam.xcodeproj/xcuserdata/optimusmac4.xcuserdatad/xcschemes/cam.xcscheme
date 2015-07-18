@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "93B09EEB1B59363200CB597F"
-               BuildableName = "cameraApp.app"
-               BlueprintName = "cameraApp"
-               ReferencedContainer = "container:cameraApp.xcodeproj">
+               BlueprintIdentifier = "93BF6D291B5A36520046CDC5"
+               BuildableName = "cam.app"
+               BlueprintName = "cam"
+               ReferencedContainer = "container:cam.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "93B09F041B59363300CB597F"
-               BuildableName = "cameraAppTests.xctest"
-               BlueprintName = "cameraAppTests"
-               ReferencedContainer = "container:cameraApp.xcodeproj">
+               BlueprintIdentifier = "93BF6D421B5A36520046CDC5"
+               BuildableName = "camTests.xctest"
+               BlueprintName = "camTests"
+               ReferencedContainer = "container:cam.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "93B09F041B59363300CB597F"
-               BuildableName = "cameraAppTests.xctest"
-               BlueprintName = "cameraAppTests"
-               ReferencedContainer = "container:cameraApp.xcodeproj">
+               BlueprintIdentifier = "93BF6D421B5A36520046CDC5"
+               BuildableName = "camTests.xctest"
+               BlueprintName = "camTests"
+               ReferencedContainer = "container:cam.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "93B09EEB1B59363200CB597F"
-            BuildableName = "cameraApp.app"
-            BlueprintName = "cameraApp"
-            ReferencedContainer = "container:cameraApp.xcodeproj">
+            BlueprintIdentifier = "93BF6D291B5A36520046CDC5"
+            BuildableName = "cam.app"
+            BlueprintName = "cam"
+            ReferencedContainer = "container:cam.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "93B09EEB1B59363200CB597F"
-            BuildableName = "cameraApp.app"
-            BlueprintName = "cameraApp"
-            ReferencedContainer = "container:cameraApp.xcodeproj">
+            BlueprintIdentifier = "93BF6D291B5A36520046CDC5"
+            BuildableName = "cam.app"
+            BlueprintName = "cam"
+            ReferencedContainer = "container:cam.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "93B09EEB1B59363200CB597F"
-            BuildableName = "cameraApp.app"
-            BlueprintName = "cameraApp"
-            ReferencedContainer = "container:cameraApp.xcodeproj">
+            BlueprintIdentifier = "93BF6D291B5A36520046CDC5"
+            BuildableName = "cam.app"
+            BlueprintName = "cam"
+            ReferencedContainer = "container:cam.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

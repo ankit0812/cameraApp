@@ -1,8 +1,8 @@
 //
 //  ViewController.m
-//  cameraApp
+//  cam
 //
-//  Created by optimusmac4 on 7/17/15.
+//  Created by optimusmac4 on 7/18/15.
 //  Copyright (c) 2015 optimusmac4. All rights reserved.
 //
 
@@ -14,15 +14,14 @@
 
 @implementation ViewController
 
-
 - (void)viewDidLoad
+
 {
     
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
-    {
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
         UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
                                                               message:@"Device has no camera"
@@ -36,8 +35,7 @@
     
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
+- (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
     
