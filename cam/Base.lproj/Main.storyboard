@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMp-7Y-hPY">
-                                <rect key="frame" x="271" y="380" width="58" height="30"/>
+                                <rect key="frame" x="256" y="510" width="89" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Take Pic">
                                     <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -29,17 +28,11 @@
                                     <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lvK-qS-scm"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7zk-wk-6y3">
-                                <rect key="frame" x="0.0" y="20" width="621" height="330"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="330" id="OBs-WX-i8M"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WrF-Wx-9jG">
-                                <rect key="frame" x="256" y="433" width="89" height="30"/>
+                                <rect key="frame" x="256" y="553" width="89" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="89" id="nQV-bP-4dU"/>
+                                    <constraint firstAttribute="width" constant="89" id="dSc-JP-8LV"/>
                                 </constraints>
                                 <state key="normal" title="Select Pic">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,17 +41,21 @@
                                     <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UHK-93-ry7"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7zk-wk-6y3">
+                                <rect key="frame" x="0.0" y="20" width="600" height="472"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WrF-Wx-9jG" firstAttribute="centerX" secondItem="mMp-7Y-hPY" secondAttribute="centerX" id="Brm-Qw-Dlc"/>
-                            <constraint firstItem="mMp-7Y-hPY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dr7-lm-tnQ"/>
-                            <constraint firstItem="WrF-Wx-9jG" firstAttribute="top" secondItem="mMp-7Y-hPY" secondAttribute="bottom" constant="23" id="NXJ-Tc-G5E"/>
-                            <constraint firstItem="7zk-wk-6y3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XDR-B1-zCk"/>
-                            <constraint firstItem="WrF-Wx-9jG" firstAttribute="centerX" secondItem="7zk-wk-6y3" secondAttribute="centerX" constant="-10" id="f0w-Mr-kY2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7zk-wk-6y3" secondAttribute="trailing" constant="-37" id="q5a-qq-vNg"/>
-                            <constraint firstItem="mMp-7Y-hPY" firstAttribute="top" secondItem="7zk-wk-6y3" secondAttribute="bottom" constant="30" id="uIk-EB-eHB"/>
-                            <constraint firstItem="7zk-wk-6y3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yEo-FK-nuu"/>
+                            <constraint firstItem="mMp-7Y-hPY" firstAttribute="leading" secondItem="WrF-Wx-9jG" secondAttribute="leading" id="7bO-K1-GrQ"/>
+                            <constraint firstItem="7zk-wk-6y3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Drj-eI-7Kp"/>
+                            <constraint firstItem="mMp-7Y-hPY" firstAttribute="top" secondItem="7zk-wk-6y3" secondAttribute="bottom" constant="18" id="UIS-FY-9EH"/>
+                            <constraint firstAttribute="trailing" secondItem="7zk-wk-6y3" secondAttribute="trailing" id="doK-ab-vDh"/>
+                            <constraint firstItem="WrF-Wx-9jG" firstAttribute="top" secondItem="mMp-7Y-hPY" secondAttribute="bottom" constant="13" id="j2c-K4-q3T"/>
+                            <constraint firstItem="mMp-7Y-hPY" firstAttribute="centerX" secondItem="7zk-wk-6y3" secondAttribute="centerX" id="n69-38-1ab"/>
+                            <constraint firstItem="mMp-7Y-hPY" firstAttribute="trailing" secondItem="WrF-Wx-9jG" secondAttribute="trailing" id="njE-6Q-czk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WrF-Wx-9jG" secondAttribute="bottom" constant="17" id="o6c-Ad-v7m"/>
+                            <constraint firstItem="7zk-wk-6y3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ojm-fO-S0G"/>
                         </constraints>
                     </view>
                     <connections>

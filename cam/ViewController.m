@@ -15,19 +15,18 @@
 @implementation ViewController
 
 - (void)viewDidLoad
-
 {
     
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
     
-    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+    //Condition using isSourceTypeAvailable to check whether device is available or Not
+    
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
         
-        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                              message:@"Device has no camera"
-                                                             delegate:nil
-                                                    cancelButtonTitle:@"OK"
-                                                    otherButtonTitles: nil];
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Device has no camera" delegate:nil                                                                                                                                                                                                 cancelButtonTitle:@"OK" otherButtonTitles: nil];
         
         [myAlertView show];
         
@@ -35,13 +34,20 @@
     
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+
+- (void)viewDidAppear:(BOOL)animated
+{
     
     [super viewDidAppear:animated];
     
 }
 
-- (IBAction)takePhoto:(UIButton *)sender {
+
+
+//Function for taking photos using UIImagePickerController
+
+- (IBAction)takePhoto:(UIButton *)sender
+{
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
@@ -52,7 +58,10 @@
     
 }
 
-- (IBAction)selectPhoto:(UIButton *)sender {
+// Function for selecting photos from gallery using UIImagePickerControllerSourceTypePhotoLibrary
+
+- (IBAction)selectPhoto:(UIButton *)sender
+{
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
@@ -64,9 +73,13 @@
     
 }
 
+
+//Use of Delegates of Image Picker Controller
+
 #pragma mark - Image Picker Controller delegate methods
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = chosenImage;
@@ -75,7 +88,8 @@
     
 }
 
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     

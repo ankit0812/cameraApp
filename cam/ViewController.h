@@ -12,8 +12,8 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
-- (IBAction)selectPhoto:(UIButton *)sender;
+- (IBAction)selectPhoto:(UIButton *)sender; // Button for selecting photos from Gallery 
 
-- (IBAction)takePhoto:(UIButton *)sender;
+- (IBAction)takePhoto:(UIButton *)sender;   // Button for taking
 @end
 
