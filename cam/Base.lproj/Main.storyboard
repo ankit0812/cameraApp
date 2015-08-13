@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cameraApp" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,6 +20,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMp-7Y-hPY">
                                 <rect key="frame" x="256" y="510" width="89" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="f3g-xS-SCF"/>
+                                </constraints>
                                 <state key="normal" title="Take Pic">
                                     <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -28,11 +31,15 @@
                                     <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lvK-qS-scm"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7zk-wk-6y3">
+                                <rect key="frame" x="0.0" y="20" width="600" height="472"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WrF-Wx-9jG">
-                                <rect key="frame" x="256" y="553" width="89" height="30"/>
+                                <rect key="frame" x="256" y="557" width="89" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="89" id="dSc-JP-8LV"/>
+                                    <constraint firstAttribute="height" constant="30" id="XHu-3d-lgk"/>
+                                    <constraint firstAttribute="width" constant="89" id="e5f-fz-z4e"/>
                                 </constraints>
                                 <state key="normal" title="Select Pic">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,21 +48,18 @@
                                     <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UHK-93-ry7"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7zk-wk-6y3">
-                                <rect key="frame" x="0.0" y="20" width="600" height="472"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mMp-7Y-hPY" firstAttribute="leading" secondItem="WrF-Wx-9jG" secondAttribute="leading" id="7bO-K1-GrQ"/>
-                            <constraint firstItem="7zk-wk-6y3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Drj-eI-7Kp"/>
-                            <constraint firstItem="mMp-7Y-hPY" firstAttribute="top" secondItem="7zk-wk-6y3" secondAttribute="bottom" constant="18" id="UIS-FY-9EH"/>
-                            <constraint firstAttribute="trailing" secondItem="7zk-wk-6y3" secondAttribute="trailing" id="doK-ab-vDh"/>
-                            <constraint firstItem="WrF-Wx-9jG" firstAttribute="top" secondItem="mMp-7Y-hPY" secondAttribute="bottom" constant="13" id="j2c-K4-q3T"/>
-                            <constraint firstItem="mMp-7Y-hPY" firstAttribute="centerX" secondItem="7zk-wk-6y3" secondAttribute="centerX" id="n69-38-1ab"/>
-                            <constraint firstItem="mMp-7Y-hPY" firstAttribute="trailing" secondItem="WrF-Wx-9jG" secondAttribute="trailing" id="njE-6Q-czk"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WrF-Wx-9jG" secondAttribute="bottom" constant="17" id="o6c-Ad-v7m"/>
-                            <constraint firstItem="7zk-wk-6y3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ojm-fO-S0G"/>
+                            <constraint firstAttribute="trailing" secondItem="7zk-wk-6y3" secondAttribute="trailing" id="3pJ-0g-HPr"/>
+                            <constraint firstItem="7zk-wk-6y3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FmX-Pa-aPg"/>
+                            <constraint firstItem="7zk-wk-6y3" firstAttribute="centerX" secondItem="mMp-7Y-hPY" secondAttribute="centerX" id="Jaw-ed-9jR"/>
+                            <constraint firstItem="mMp-7Y-hPY" firstAttribute="top" secondItem="7zk-wk-6y3" secondAttribute="bottom" constant="18" id="RxI-pJ-KHt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WrF-Wx-9jG" secondAttribute="bottom" constant="13" id="SfX-vT-jJC"/>
+                            <constraint firstItem="WrF-Wx-9jG" firstAttribute="top" secondItem="mMp-7Y-hPY" secondAttribute="bottom" constant="17" id="fd9-CU-XFU"/>
+                            <constraint firstItem="WrF-Wx-9jG" firstAttribute="trailing" secondItem="mMp-7Y-hPY" secondAttribute="trailing" id="u84-1G-M5d"/>
+                            <constraint firstItem="7zk-wk-6y3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uS1-F6-Tr6"/>
+                            <constraint firstItem="WrF-Wx-9jG" firstAttribute="leading" secondItem="mMp-7Y-hPY" secondAttribute="leading" id="zh8-lS-OT1"/>
                         </constraints>
                     </view>
                     <connections>

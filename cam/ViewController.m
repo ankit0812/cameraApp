@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic,strong) UIPopoverController *popOver;
+
 @end
 
 @implementation ViewController
@@ -22,6 +24,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //Condition using isSourceTypeAvailable to check whether device is available or Not
+    
+     self.popOver.delegate=self;
     
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
     {
@@ -68,7 +72,20 @@
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        // The device is an iPad running iOS 3.2 or later.
+        CGRect r=sender.frame;
+        self.popOver = [[UIPopoverController alloc] initWithContentViewController:picker];
+        //  CGRectMake(10, 30, 200, 350)
+        [self.popOver presentPopoverFromRect:r
+                                      inView:self.view
+                    permittedArrowDirections:UIPopoverArrowDirectionDown
+                                    animated:YES];
+    }
+    
     [self presentViewController:picker animated:YES completion:NULL];
+    
     
     
 }
